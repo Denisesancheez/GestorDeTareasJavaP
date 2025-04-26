@@ -19,10 +19,11 @@ do {
     System.out.println("Escribe la tarea:");
     sc.nextLine();
     String tarea = sc.nextLine();
+    if (!tarea.trim().isEmpty()) {
     tareas.add(tarea);
-    break;
-    case 2:
-    System.out.println("Tareas: " + tareas);
+    } else {
+    System.out.println("La tarea no puede estar vacía.");
+    }
     break;
     }
     } while (opcion != 3);
